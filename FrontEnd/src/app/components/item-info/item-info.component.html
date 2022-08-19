@@ -1,0 +1,29 @@
+
+
+<div class="card" *ngIf = 'item' >
+    <h4 class="card-title responsive-item">{{item.ProductName}}</h4>
+    <div class="card-body ">
+            <div class="row">
+                <div class="column">
+                
+                    <p class="mini responsive-item" *ngIf = 'item.CategoryName'>Tipo: {{item.CategoryName}}</p>
+                    <p class="mini responsive-item" *ngIf = 'item.Estado'>Estado: {{item.Estado}}</p>
+                </div>
+                <div class="column">
+                    <p class="mini responsive-item" *ngIf = 'item.SerialNumber'>N°Serie: {{item.SerialNumber}}</p>
+                    <p class="mini responsive-item" *ngIf = 'item.Assy'>Assy: {{item.Assy}}</p>
+                </div>
+
+            </div>
+            <div class="row">
+                
+                    <div class="content responsive-item" *ngIf = 'item.ProductDescription'>Descripcion:
+                        <p>{{item.ProductDescription}}</p> 
+                    </div>
+                    <div class="content responsive-item" *ngIf = 'item.Observaciones'>Observaciones:
+                        <p> {{item.Observaciones}}</p>
+                    </div>
+            </div>
+            
+    </div>        
+</div>

@@ -1,0 +1,35 @@
+
+.space{
+    margin-bottom: 20px;
+}
+li{
+    padding: 20px;
+    border-radius: 30px;
+    margin-bottom: 20px;
+}
+h4{
+    font-size: 2vw;
+}
+.mini{
+    font-size: 1.5vw;
+    color:darkgray;
+}
+
+@media (max-width: 700px) {
+    h4.responsive-item{
+        font-size: 13px;
+    }
+    p.responsive-item{
+        font-size: 12px
+    }
+    
+}
+@media (max-width: 700px) {
+    h3.responsive-tittle{
+        font-size: 20px;
+    }
+    h6.responsive-tittle{
+        font-size: 10px;
+    }
+    
+}

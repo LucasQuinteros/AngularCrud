@@ -1,0 +1,26 @@
+<div class="space">
+    <!--- <h3 class="responsive-tittle">Items en la base</h3>--->
+    <h5 class="responsive-tittle">Seleccione el item que desee ver</h5>
+</div>
+<div>
+    <ul class="list-group" id="list-tab">
+        <li class="list-group-item list-group-item-action  align-items-center" 
+            data-toggle="list" routerLink="/items/info/{{item.ProductID}}" 
+                *ngFor = 'let item of items'>
+                <h4 class="responsive-item">{{item.ProductName}}</h4>
+                <div class="d-flex justify-content-between align-items-center">
+                    
+                    <p class="mini responsive-item" >Tipo: {{item.CategoryName}}</p>
+                    <p class="mini responsive-item" *ngIf = 'item.Estado'>Estado: {{item.Estado}}</p>
+                    <p class="mini responsive-item" *ngIf = 'item.Assy'>Assy: {{item.Assy}}</p>
+                    
+                </div>
+                <p class="mini responsive-item" *ngIf = 'item.ProductDescription'>Descripcion: {{item.ProductDescription}}</p>
+                <p class="mini responsive-item" *ngIf = 'item.Observaciones'>Observaciones: {{item.Observaciones}}</p>
+                
+
+        </li>
+    </ul>
+</div>
+
+

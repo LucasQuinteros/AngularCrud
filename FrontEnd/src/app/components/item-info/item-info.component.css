@@ -1,0 +1,56 @@
+.card{
+    border-radius: 30px;
+}
+
+
+.space{
+    margin-bottom: 20px;
+}
+
+h4{
+    color: white;
+    font-size: 4vw;
+    padding: 20px;
+    
+}
+
+.mini{
+    font-size: 1.5vw;
+    color:white;
+}
+
+.row{
+    padding-left: 15px;
+    
+}
+.column{
+    float: left;
+    width: 50%;
+    
+}
+.content{
+    font-size: 2vw;
+    color:white;
+}
+@media (max-width: 700px) {
+    h4.responsive-item{
+        font-size: 20px;
+    }
+    p.responsive-item{
+        font-size: 20px
+        
+    }
+    div.responsive-item{
+        font-size: 20px
+    }
+    
+}
+@media (max-width: 700px) {
+    h3.responsive-tittle{
+        font-size: 20px;
+    }
+    h6.responsive-tittle{
+        font-size: 10px;
+    }
+    
+}
