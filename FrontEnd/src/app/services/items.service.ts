@@ -11,21 +11,20 @@ export class ItemsService {
   url : string = 'http://10.0.0.177:3000/api' // modificar si no se ven los datos de la base
   constructor(private http : HttpClient) { }
 
-  getItems(): Observable<Item[]>{
-    
-    return this.http.get<Item[]>(`${this.url}/items`);
+  getItems(page : number): Observable<Item[]>{
+    return this.http.get<Item[]>(`${this.url}/items/pages/${page}`);
   }
 
   getItem(id : Number) : Observable<any>{
     return this.http.get(`${this.url}/items/${id}`);
   }
   saveItem(Item : Item) : Observable<Item>{
-    return this.http.post(`${this.url}/Items`, Item);
+    return this.http.post(`${this.url}/items`, Item);
   }
   deleteItem(id : string) : Observable<Item>{
-    return this.http.delete(`${this.url}/Items/${id}`);
+    return this.http.delete(`${this.url}/items/${id}`);
   }
   updateItem(id: string, updatedItem : Item) : Observable<Item>{
-    return this.http.put(`${this.url}/Items/${id}`,updatedItem);
+    return this.http.put(`${this.url}/items/${id}`,updatedItem);
   }
 }

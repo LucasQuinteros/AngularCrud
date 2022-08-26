@@ -9,7 +9,7 @@ class ItemsRoutes{
         this.config();
     }
     config(): void{
-        this.router.get('/', itemsControllers.getItems);
+        this.router.get('/pages/:page', itemsControllers.getItems);
         this.router.get('/:id',itemsControllers.getItemByID)
     }
 }

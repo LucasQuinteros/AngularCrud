@@ -1,0 +1,14 @@
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <li class="page-item {{disabled}} " (click) ='prevClick()'>
+        <a class="page-link">Previous</a>
+      </li>
+      <li *ngFor = 'let number of index'>
+        <a class="page-link" (click) = "onClick(number)"> {{number}}</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" (click) ='nextClick()'>Next</a>
+      </li>
+    </ul>
+  </nav>
+

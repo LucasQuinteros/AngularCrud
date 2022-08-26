@@ -3,6 +3,9 @@
     <h5 class="responsive-tittle">Seleccione el item que desee ver</h5>
 </div>
 <div>
+    <div class="mb-4">
+        <app-pagination (pageChange)=" getItemsByPage($event) " ></app-pagination>
+    </div>
     <ul class="list-group" id="list-tab">
         <li class="list-group-item list-group-item-action  align-items-center" 
             data-toggle="list" routerLink="/items/info/{{item.ProductID}}" 
@@ -21,6 +24,9 @@
 
         </li>
     </ul>
+
+    
 </div>
+
 
 

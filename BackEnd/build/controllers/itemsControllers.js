@@ -37,7 +37,10 @@ class ItemsControllers {
     constructor() {
         this.getItems = (req, res) => __awaiter(this, void 0, void 0, function* () {
             try {
-                const items = yield ItemService.getItems();
+                let page = 50 * (Number(req.params.page) - 1);
+                if (page <= 0)
+                    page = 0;
+                const items = yield ItemService.getItems(page);
                 res.status(200).json(items);
             }
             catch (error) {

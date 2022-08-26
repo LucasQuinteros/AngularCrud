@@ -16,7 +16,10 @@ class ItemsControllers{
     }
     getItems: RequestHandler = async (req : Request, res: Response) =>{
         try {
-            const items = await ItemService.getItems();
+            let page  = 50* (Number (req.params.page) -1);
+            if(page <= 0 ) page = 0;
+            const items = await ItemService.getItems(page);
+            
             res.status(200).json(items);
     
         } catch (error) {

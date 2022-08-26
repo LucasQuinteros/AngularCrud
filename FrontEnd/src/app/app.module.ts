@@ -11,6 +11,8 @@ import { ItemsService } from './services/items.service';
 import { ItemInfoComponent } from './components/item-info/item-info.component';
 import { ItemSearchComponent } from './components/item-search/item-search.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { FooterComponent } from './components/footer/footer.component';
     ItemListComponent,
     ItemInfoComponent,
     ItemSearchComponent,
-    FooterComponent
+    FooterComponent,
+    PaginationComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,4 @@
-import {createPool, Pool} from 'mysql2';
+import {createPool, Pool, RowDataPacket} from 'mysql2';
 import { Item } from './models/item';
 import keys from './keys';
 
@@ -19,10 +19,10 @@ export const init = () =>{
 }
 
 
-export const execute = <T>(query : string, params : string[] | Object): Promise<Item[]> => {
+export const execute = <Item>(query : string, params : string[] | Object): Promise<RowDataPacket[]> => {
     try{
-        return new Promise<Item[]>( ( resolve, reject) =>{ 
-            pool.query(query,params,(error,results)=>{
+        return new Promise<RowDataPacket[]>( ( resolve, reject) =>{ 
+            pool.query(query,params,(error,results : RowDataPacket[])=>{
                 if(error) reject(error);
                 else resolve(results);
             });
