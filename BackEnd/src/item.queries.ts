@@ -9,5 +9,11 @@ export const ItemQueries = {
                 left join categories ON products.CategoryID = categories.CategoryID
                 left join estado  ON products.EstadoID = estado.EstadoID 
                 where ProductID=?`,
+    GetNames:`
+                Select * from products 
+                left join categories ON products.CategoryID = categories.CategoryID
+                left join estado  ON products.EstadoID = estado.EstadoID 
+                where ProductName like ?
+    `
     
 }

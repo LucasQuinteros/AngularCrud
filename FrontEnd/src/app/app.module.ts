@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,6 +13,8 @@ import { ItemInfoComponent } from './components/item-info/item-info.component';
 import { ItemSearchComponent } from './components/item-search/item-search.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { ItemMenuComponent } from './components/item-menu/item-menu.component';
+
 
 
 @NgModule({
@@ -23,12 +26,14 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     ItemInfoComponent,
     ItemSearchComponent,
     FooterComponent,
-    PaginationComponent
+    PaginationComponent,
+    ItemMenuComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [ItemsService],
   bootstrap: [AppComponent]

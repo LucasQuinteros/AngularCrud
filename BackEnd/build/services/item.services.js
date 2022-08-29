@@ -9,7 +9,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
     });
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.getItemByID = exports.getItems = void 0;
+exports.getNamesByCoincidence = exports.getItemByID = exports.getItems = void 0;
 const database_1 = require("../database");
 const item_queries_1 = require("../item.queries");
 const getItems = (page) => __awaiter(void 0, void 0, void 0, function* () {
@@ -20,3 +20,7 @@ const getItemByID = (id) => __awaiter(void 0, void 0, void 0, function* () {
     return (0, database_1.execute)(item_queries_1.ItemQueries.GetItem, [id]);
 });
 exports.getItemByID = getItemByID;
+const getNamesByCoincidence = (name) => __awaiter(void 0, void 0, void 0, function* () {
+    return (0, database_1.execute)(item_queries_1.ItemQueries.GetNames, [name]);
+});
+exports.getNamesByCoincidence = getNamesByCoincidence;

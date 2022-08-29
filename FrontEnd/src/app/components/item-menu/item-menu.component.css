@@ -1,0 +1,16 @@
+.big{
+    block-size: 20vw;
+    font-size: xx-large;
+} 
+.spacer{
+    margin-top: 5vw;
+}
+
+@media (max-width:700px) {
+    .big{
+    block-size: 50vw;
+    } 
+    .spacer{
+        margin-top: 35vw;
+    }
+}

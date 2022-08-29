@@ -13,6 +13,7 @@ class ItemsRoutes {
     config() {
         this.router.get('/pages/:page', itemsControllers_1.default.getItems);
         this.router.get('/:id', itemsControllers_1.default.getItemByID);
+        this.router.get('/search/:name', itemsControllers_1.default.getItemByCoincidence);
     }
 }
 const itemsRoutes = new ItemsRoutes();

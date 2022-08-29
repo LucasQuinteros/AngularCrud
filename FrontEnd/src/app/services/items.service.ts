@@ -18,6 +18,9 @@ export class ItemsService {
   getItem(id : Number) : Observable<any>{
     return this.http.get(`${this.url}/items/${id}`);
   }
+  getNamesByCoincidence( name : string) : Observable<Item[]>{
+    return this.http.get<Item[]>(`${this.url}/items/search/${name}`);
+  }
   saveItem(Item : Item) : Observable<Item>{
     return this.http.post(`${this.url}/items`, Item);
   }

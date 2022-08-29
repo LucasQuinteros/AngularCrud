@@ -44,7 +44,7 @@ class ItemsControllers {
                 res.status(200).json(items);
             }
             catch (error) {
-                console.error('[teams.controller][getItems][Error] ', typeof error === 'object' ? JSON.stringify(error) : error);
+                console.error('[items.controller][getItems][Error] ', typeof error === 'object' ? JSON.stringify(error) : error);
                 res.status(500).json({
                     message: 'There was an error when fetching items'
                 });
@@ -56,9 +56,22 @@ class ItemsControllers {
                 res.status(200).json(item);
             }
             catch (error) {
-                console.error('[teams.controller][getItembyID][Error] ', typeof error === 'object' ? JSON.stringify(error) : error);
+                console.error('[items.controller][getItembyID][Error] ', typeof error === 'object' ? JSON.stringify(error) : error);
                 res.status(500).json({
                     message: 'There was an error when fetching item by ID'
+                });
+            }
+        });
+        this.getItemByCoincidence = (req, res) => __awaiter(this, void 0, void 0, function* () {
+            try {
+                const name = req.params.name + '%';
+                const item = yield ItemService.getNamesByCoincidence(name);
+                res.status(200).json(item);
+            }
+            catch (error) {
+                console.error('[items.controller][getItemsByCoincidence][Error]', typeof error === 'object' ? JSON.stringify(error) : error);
+                res.status(500).json({
+                    message: 'There was an error when fetching item by coincidence'
                 });
             }
         });

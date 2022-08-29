@@ -1,4 +1,4 @@
-<form class="d-flex">
-    <input class="form-control me-2 " type="text" placeholder="Buscar por nombre">
-    <button class="btn btn-secondary sm-0" type="submit">Buscar</button>
-</form>
+<div class="d-flex">
+    <input id = productName [(ngModel)] = 'productName' class="form-control me-2 " type="text" placeholder="Buscar por nombre">
+    <button class="btn btn-secondary sm-0" type="submit" routerLink = "/items/search/{{productName}}" > Buscar </button>
+</div>
